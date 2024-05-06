@@ -10,7 +10,7 @@ function closeForm() {
 }
 
 function submitForm(event) {
-    emailjs.sendForm('service_d70f80r', 'template_zgl9ee2', '#myForm')
+    emailjs.sendForm('Service_ID', 'Template_ID', '#myForm')
     .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);
     }, function(error) {
