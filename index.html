@@ -17,7 +17,7 @@
   <script type="text/javascript">
     (function(){
       emailjs.init({
-        publicKey: "YG2560nSNyhNQ3ObH",
+        publicKey: "Your_Public_Key",
       });
     })();
   </script>
@@ -25,9 +25,9 @@
   <ul class="navigation">
     <li style="padding:0vh 10vh; height: 60%; width: 15%; display: flex; justify-content: center; align-items: center;"><img src="image/word_box.png" alt="Logo" width="180%" height="250%" /></li>
     <li style="width: 50%; height: 100%;"></li>
-    <li class="nav"><a href="#services"><button class="About_Us_Btn" style="right:260px">Услуги</button></a></li>
-    <li class="nav"><a href="#contacts"><button class="About_Us_Btn" style="right:140px">Адрес</button></a></li>
-    <li class="nav"><button id="OpenFormBtn" class="About_Us_Btn" style="right:20px">Получить консультацию</button></li>
+    <li class="nav"><a href="#services"><button class="About_Us_Btn" style="right:260px">Services</button></a></li>
+    <li class="nav"><a href="#contacts"><button class="About_Us_Btn" style="right:140px">Contacts</button></a></li>
+    <li class="nav"><button id="OpenFormBtn" class="About_Us_Btn" style="right:20px">Get consultation</button></li>
   </ul>
 
   <div id=About_Us>
@@ -62,63 +62,63 @@
   </div>
 
   <div id="contacts" class="contacts">
-    <h1>Контактные данные</h1>
-    <p>Адрес местонахождения</p>
+    <h1>Contact Us</h1>
+    <p>Our location</p>
     <ul style="display: flex; flex-direction: row; height: 100%; width: 100%;">
         <li style="height: 100%; width:40%; display: flex; justify-content: center; align-items: center; margin: 0 10% 0 0;">
             <ul style=" display: flex; height:100%; width: 65%; flex-direction: column;">
                 <li style="padding: 0vw 5vh; width: 100%; height: 100%;">
                     <div class="contact">
                         <img src="image/Location.svg"/>
-                        <h1>Адрес</h1>
+                        <h1>Location</h1>
                         <p><u>Turekulova 230</u></p>
                     </div>
                 </li>
                 <li style="padding: 0vw 5vh; width: 100%; height: 100%;">
                     <div class="contact">
                         <img src="image/Phone.svg"/>
-                        <h1>Телефон/WhatsApp</h1>
-                        <p><u>+7 (707) 370-5095</u></p>
+                        <h1>Phone/WhatsApp</h1>
+                        <p><u>your_phone</u></p>
                     </div>
                 </li>
                 <li style="margin: 5vw 0 0 5vh; width: 100%; height: 100%;">
                     <div class="contact">
                         <img src="image/Mail.svg"/>
                         <h1>Email</h1>
-                        <p><u>zansecurity@mail.ru</u></p>
+                        <p><u>your_mail@gmail.com</u></p>
                     </div>
                 </li>
             </ul>
         </li>
-        <li style="height: 80%; width:50%; margin: 5% 10% 5% 5%;"><a href="https://2gis.kz/shymkent/geo/22659371324053175/tab/services?m=69.641937%2C42.316251%2F17.1" target="_blank"><img src="image/Location_image.png" alt="Image of Location" width="100%" height="100%" /></a></li>
+        <li style="height: 80%; width:50%; margin: 5% 10% 5% 5%;"><a href="Link to location" target="_blank"><img src="image/Location_image.png" alt="Image of Location" width="100%" height="100%" /></a></li>
     </ul>
   </div>
 
   <div id="footer" class="footer">
     <div style="background-color:black; width: 85%; height: 0.5vh; top: 0; margin: 0 7.5% 0 7.5%;"></div>
     <div style="display: flex; align-items: center; padding: 0 10%; flex-direction: row;">
-        <p style="display: flex; align-items: center;">© Copyright 2024. Все права защищены ИП "ZANSECURITY".<img src="image/Logo.svg" height="50%" width="10%" /></p>
-        <p style="padding: 0 5% 0 20%;">Политика конфиденциальности</p>
-        <p>Согласие на обработку персональных данных</p>
+        <p style="display: flex; align-items: center;">© Copyright 2024.<img src="image/Logo.svg" height="50%" width="10%" /></p>
+        <p style="padding: 0 5% 0 20%;">Privacy policy</p>
+        <p>Terms of Service</p>
     </div>
   </div>
 
   <div id="Form" class="form" style="display: none; width: 25vw; height: 60vh;">
     <form id="myForm" onsubmit="submitForm(event)" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width:100%; height: 100%;">
         <div style="margin: 2vh 10% 2vh 10%; height: 5vh; width: 80%;">
-            <label for="name">Имя:</label>
+            <label for="name">Name:</label>
             <input type="text" id="name" name="user_name" class="search">
         </div>
         <div style="margin: 5vh 10% 2vh 10%; height: 5vh; width: 80%;">
-            <label for="phone">Номер Телефона/WhatsApp:</label>
+            <label for="phone">Phone/WhatsApp:</label>
             <input type="phone" id="phone" name="user_phone" class="search">
         </div>
         <div style="margin: 5vh 10% 2vh 10%; height: 5vh; width: 80%;">
-            <label for="email">Email:<span style="color: #AAA;">Не обязательно указывать</span></label>
+            <label for="email">Email:<span style="color: #AAA;">Is not important</span></label>
             <input type="email" id="email" name="user_email" class="search">
         </div>
         <div style="margin: 5vh 10% 3vh 10%; height: 10vh; weight: 80%;">
-            <label for="message">Краткая информация о деле:</label>
+            <label for="message">Message:</label>
             <textarea id="message" name="message" class="search" style="height: 100%;"></textarea>
         </div>
         <input type="submit" value="Submit" class="About_Us_Btn" style="margin: 2vh 10% 2vh 10%;width:20%; height: 10%; border-radius: 1.5vh;">
