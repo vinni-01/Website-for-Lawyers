@@ -2,11 +2,19 @@
 <html lang="en" lang="ru">
 
 <head>
-
+  <link rel="preload" href="styles.css" as="style">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zansecurity</title>
-  <link rel="icon" href="image/Logo.png" type="image/x-icon">
+  <script type="text/javascript">
+    const timestamp = new Date().getTime();
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'styles.css?ver=' + timestamp;
+    document.head.appendChild(link);
+  </script>
+  <link rel="icon" id="icon" href="image/Logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -17,115 +25,185 @@
   <script type="text/javascript">
     (function(){
       emailjs.init({
-        publicKey: "Your_Public_Key",
+        publicKey: "YG2560nSNyhNQ3ObH",
       });
     })();
   </script>
 
-  <ul class="navigation">
-    <li style="padding:0vh 10vh; height: 60%; width: 15%; display: flex; justify-content: center; align-items: center;"><img src="image/word_box.png" alt="Logo" width="180%" height="250%" /></li>
-    <li style="width: 50%; height: 100%;"></li>
-    <li class="nav"><a href="#services"><button class="About_Us_Btn" style="right:260px">Services</button></a></li>
-    <li class="nav"><a href="#contacts"><button class="About_Us_Btn" style="right:140px">Contacts</button></a></li>
-    <li class="nav"><button id="OpenFormBtn" class="About_Us_Btn" style="right:20px">Get consultation</button></li>
-  </ul>
-
-  <div id=About_Us>
-    <div>
-        <img src="image/About_Us_Img.png" alt="Cover image about Justice" width="100%" height="600vw" />
-    </div>
-    <ul class="About_Us_Txt" style="width: 100%; height:20vh;">
-        <li class="About_Us_Txt" style="width: 30%; height: 100%; padding: 4vw 4vw;"><h1 style="font-size:40px;">Providing Legal Services That You Can Trust</h1></li>
-        <li class="About_Us_Txt" style="width:30%; height: 100%; padding: 2vw 15vw;"><div>
-            <p style="font-size: 20px;">At our firm, we are dedicated to providing high-quality legal services to meet your needs. With our experienced team of attorneys, we strive to deliver the best possible outcomes for our clients.</p>
-
-        </div></li>
-    </ul>    
+  <div id="navbar" class="Nav_Div" style="top: 0px; z-index: 2;" >
+      <ul class="navigation">
+        <li class="nav_img"><img src="image/word_box.png" alt="Logo" width="100%" height="auto" /></li>
+        <li class="nav_space"></li>
+        <li class="nav"><a href="#services"><button id="About_Us_Btn" class="About_Us_Btn" >Специалист</button></a></li>
+        <li class="nav"><a href="#contacts"><button id="Adress_Btn" class="About_Us_Btn" >Контакты</button></a></li>
+        <li class="nav"><button id="OpenFormBtn" class="About_Us_Btn" >Получить консультацию</button></li>
+      </ul>
+      <p id="nav_txt" class="nav_txt">*первая консультация бесплатно</p>
   </div>
 
-  <div id="services" class="services">
-    <ul>
-        <li class="services_body" style="width: 50%; height: 60%; padding:2vw 2vw; justify-content: center; align-items: center;"><img src="image/Consultation.jpg" alt="Image with Consultation" width=100% height=100% /></li>
-        <li class="services_body" style="width: 40%; height: 100%; justify-content: center; align-items: center; padding: 1vw 1vw">
-            <div >
-                <ul style="list-style-type: none; padding:10vw 10vw;">
-                    <li><h3>Expert Legal Services Provider</h3></li>
-                    <li>Our firm offers a wide range of legal services, ensuring that our clients receive<br> comprehensive and personalized support throughout their legal journey.</li>
-                    <li><h3>Tailored Legal Solution</h3></li>
-                    <li>We understand that each case is unique, which is why we take a customized<br> approach to provide the best legal solutions that meet our clients' specific <br>needs.</li>
-                    <li><h3>Experienced Legal Team</h3></li>
-                    <li>Our team of highly skilled and experienced attorneys is dedicated to delivering<br> exceptional legal representation and achieving favorable outcomes for our <br>clients.</li>
+  <div style="display: flex; flex-direction: column; gap: 10vw; overflow: auto;">
+      <div id=About_Us class="About_Us">
+        <img src="image/Logo.png" alt="Logo of the firm" class="About_Us_Img" />
+        <ul class="About_Us_Txt" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height:80%;">
+            <li class="About_Us_Txt" style="width:80%; height: 100%; padding: 2% 5%;"><div>
+                <table style="height:100%; width: 100%;">
+                    <thead style="text-align: center;">
+                        <tr>
+                            <th scope="col" colspan="4">Юридические Услуги</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>юридическая помощь при мошенничестве</th>
+                            <th>взыскание долга</th>
+                            <th>банкротство физических лиц</th>
+                            <th>представительство в суде</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">брачно-семейные отношения (алименты, раздел имущества, судебные споры)</th>
+                            <th>представительство в суде</th>
+                            <th>аресты банковских счетов</th>
+                        </tr>
+                        <tr>
+                            <th>регистрация товарного знака</th>
+                            <th colspan="2">исполнительное производство (аресты, работа с ЧСИ)</th>
+                            <th>наследство</th>
+                        </tr>
+                        <tr>
+                            <th>страховые случаи</th>
+                            <th>вопросы миграции</th>
+                            <th>трудовые споры</th>
+                            <th>подготовка документов для ТОО</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">защита прав потребителей (некачественный товар, некачественное выполнение работ)</th>
+                            <th>подготовка учредительных документов для юридических лиц</th>
+                            <th>подготовка разных видов договоров</th>
+                        </tr>
+                        <tr>
+                            <th>подготовка заявлений, иска, жалоб, ходатайств</th>
+                            <th>услуги для юридических лиц</th>
+                            <th colspan="2">другие вопросы по защите прав и законных интересов</th>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div></li>
+        </ul>    
+      </div>
+
+      <div id="services" class="services">
+        <ul style="display:flex; flex-direction: row; align-items: center; width: 100%;">
+            <li class="services_body" style="width: 50%; height: 100%; margin: 0 0 0 1vh;"><img src="image/Profile1.jpg" alt="Portfolio Image" class="service_img" /></li>
+            <li class="services_body" style="width: 45%; height: 80%;">
+                <div>
+                    <p class="service_txt">Олег Лапин, юрист со стажем работы более 15 лет. <br>В составе палаты юридических консультантов. <br>Два высших образования: юрист, экономика. <br>Работа по законодательству, подготовка документов, представительство в суде.<br> Честный и добросовестный подход к работе.<br>Квалифицированная юридическая помощь.</p>
+                    <!-- <ul style="list-style-type: disc; padding:10vw 10vw;">
+                        <li style="list-style-type:none;"><h2>Юридические Услуги</h2></li>
+                        <li>брачно-семейные отношения (алименты, раздел имущества, судебные споры);</li>
+                        <li>наследство;</li>
+                        <li>взыскание долга;</li>
+                        <li>банкротство физических лиц;</li>
+                        <li>представительство в суде;</li>
+                        <li>регистрация товарного знака;</li>
+                        <li>аресты банковских счетов;</li>
+                        <li>исполнительное производство (аресты, работа с ЧСИ);</li>
+                        <li>юридическая помощь при мошенничестве;</li>
+                        <li>страховые случаи;</li>
+                        <li>вопросы миграции;</li>
+                        <li>трудовые споры;</li>
+                        <li>защита прав потребителей (некачественный товар, некачественное выполнение работ);</li>
+                        <li>подготовка учредительных документов для юридических лиц;</li>
+                        <li>подготовка документов для ТОО;</li>
+                        <li>подготовка разных видов договоров;</li>
+                        <li>подготовка заявлений, иска, жалоб, ходатайств;</li>
+                        <li>услуги для юридических лиц;</li>
+                        <li>другие вопросы по защите прав и законных интересов.</li>
+                    </ul> -->
+                </div>
+            </li>
+        </ul>
+      </div>
+
+      <div id="contacts" class="contacts">
+        <h1>Контактные данные</h1>
+        <!--<p>Адрес местонахождения</p> -->
+        <ul style="display: flex; flex-direction: row; height: 100%; width: 100%; justify-content: center; align-items: center;">
+            <li style="height: 100%; width:40%; display: flex; justify-content: center; align-items: center; margin: 0 10% 0 0;">
+                <ul style=" display: flex; height:100%; width: 65%; flex-direction: column;">
+                    <li style="padding: 0vw 12.5%; width: 100%; height: 100%;">
+                        <div class="contact">
+                            <img src="image/instagram.svg" width="15%" height="auto" />
+                            <h1>Instagram</h1>
+                            <div id="adress_copy"><a href="https://www.instagram.com/zansecurity.kz/"><p style="color:black;"><u>zansecurity.kz</u></p></a></div>
+                        </div>
+                    </li>
+                    <li style="padding: 0vw 12.5%; width: 100%; height: 100%;">
+                        <div class="contact">
+                            <img src="image/Phone.svg" width="15%" height="auto"/>
+                            <h1 style="font-size: 175%; height: 30%;">Телефон</br>(WhatsApp)</h1>
+                            <div id="phone_copy"><p><u>+7 (707) 370-5095</u></p></div>
+                        </div>
+                    </li>
+                    <li style="margin: 15% 0 0 12.5%; width: 100%; height: 100%;">
+                        <div class="contact">
+                            <img src="image/Mail.svg" width="15%" height="auto"/>
+                            <h1>Email</h1>
+                            <div id="mail_copy"><p><u>zansecurity@mail.ru</u></p></div>
+                        </div>
+                    </li>
                 </ul>
-            </div>
-        </li>
-    </ul>
-  </div>
+            </li>
+            <!--<li class="contact_img"><a href="https://2gis.kz/shymkent/geo/22659371324053175/tab/services?m=69.641937%2C42.316251%2F17.1" target="_blank"><img src="image/Location_image.png" alt="Image of Location" width="100%" height="100%" /></a></li> -->
+            <li style="height: 100%; width: 60%; display: flex; justify-content: center; align-items: center;">
+                <div style="display:flex;justify-content: center; align-items: center;">
+                <p style="display:inline; width:100%; height: 100%; font-size: 150%;">
+                Юридический консультант Палаты юридических консультантов </br> «Центр частнопрактикующих юридических консультантов г.Алматы»</br></br> <b>Адрес:</b> Республика Казахстан, город Алматы, </br> Алмалинский район, улица Қарасай батыра, 152/1, Блок А</br></br>Услуги оказываются по всей территории Республики Казахстан.</br>Работаем официально по договору со всеми отчетными документами.</br>Принцип работы: преимущественно удаленно -онлайн, с возможностью временного прибытия по договоренности в любой город Казахстана.</p></div></li>
+        </ul>
+      </div>
 
-  <div id="contacts" class="contacts">
-    <h1>Contact Us</h1>
-    <p>Our location</p>
-    <ul style="display: flex; flex-direction: row; height: 100%; width: 100%;">
-        <li style="height: 100%; width:40%; display: flex; justify-content: center; align-items: center; margin: 0 10% 0 0;">
-            <ul style=" display: flex; height:100%; width: 65%; flex-direction: column;">
-                <li style="padding: 0vw 5vh; width: 100%; height: 100%;">
-                    <div class="contact">
-                        <img src="image/Location.svg"/>
-                        <h1>Location</h1>
-                        <p><u>Turekulova 230</u></p>
-                    </div>
-                </li>
-                <li style="padding: 0vw 5vh; width: 100%; height: 100%;">
-                    <div class="contact">
-                        <img src="image/Phone.svg"/>
-                        <h1>Phone/WhatsApp</h1>
-                        <p><u>your_phone</u></p>
-                    </div>
-                </li>
-                <li style="margin: 5vw 0 0 5vh; width: 100%; height: 100%;">
-                    <div class="contact">
-                        <img src="image/Mail.svg"/>
-                        <h1>Email</h1>
-                        <p><u>your_mail@gmail.com</u></p>
-                    </div>
-                </li>
-            </ul>
-        </li>
-        <li style="height: 80%; width:50%; margin: 5% 10% 5% 5%;"><a href="Link to location" target="_blank"><img src="image/Location_image.png" alt="Image of Location" width="100%" height="100%" /></a></li>
-    </ul>
-  </div>
-
-  <div id="footer" class="footer">
-    <div style="background-color:black; width: 85%; height: 0.5vh; top: 0; margin: 0 7.5% 0 7.5%;"></div>
-    <div style="display: flex; align-items: center; padding: 0 10%; flex-direction: row;">
-        <p style="display: flex; align-items: center;">© Copyright 2024.<img src="image/Logo.svg" height="50%" width="10%" /></p>
-        <p style="padding: 0 5% 0 20%;">Privacy policy</p>
-        <p>Terms of Service</p>
+      <div id="footer" class="footer" style="flex-direction: column;">
+        <div style="display: flex; background-color:black; width: 85%; height: 5%; top: 0; margin: 0 7.5% 0 7.5%;"></div>
+        <div style="display: flex; align-items: center; padding: 0 10%; flex-direction: row; height: 95%;">
+            <p style="display: flex; align-items: center; width: 60%;">© Copyright 2024. Все права защищены ИП "ZANSECURITY".<img src="image/Logo.png" height="auto" width="20%" /></p>
+            <p style="padding: 0 5% 0 15%; width: 25%;">Политика конфиденциальности</p>
+            <p>Согласие на обработку персональных данных</p>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div id="Form" class="form" style="display: none; width: 25vw; height: 60vh;">
+  <div id="Form" class="form">
     <form id="myForm" onsubmit="submitForm(event)" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width:100%; height: 100%;">
-        <div style="margin: 2vh 10% 2vh 10%; height: 5vh; width: 80%;">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="user_name" class="search">
+        <div style="height: 60%; width: 80%; margin: 0 10% 2% 10%;">
+            <div style="height: 25%; width: 100%;">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="user_name" class="search" style="font-size: 100%;">
+            </div>
+            <div style="height: 25%; width: 100%; margin: 15% 0 0 0;">
+                <label for="phone">Номер Телефона/WhatsApp:</label>
+                <input type="phone" id="phone" name="user_phone" class="search" style="font-size: 100%;">
+            </div>
+            <div style="height: 25%; width: 100%; margin: 15% 0 0 0;">
+                <label for="email">Email:<span style="color: #AAA;">Не обязательно указывать</span></label>
+                <input type="email" id="email" name="user_email" class="search" style="font-size: 100%;">
+            </div>
         </div>
-        <div style="margin: 5vh 10% 2vh 10%; height: 5vh; width: 80%;">
-            <label for="phone">Phone/WhatsApp:</label>
-            <input type="phone" id="phone" name="user_phone" class="search">
+        <div style="margin: 5% 10% 5% 10%; height: 25%; weight: 80%;">
+            <label for="message">Краткая информация о деле:</label>
+            <textarea id="message" name="message" class="search" style="height: 100%; font-size: 100%;"></textarea>
         </div>
-        <div style="margin: 5vh 10% 2vh 10%; height: 5vh; width: 80%;">
-            <label for="email">Email:<span style="color: #AAA;">Is not important</span></label>
-            <input type="email" id="email" name="user_email" class="search">
-        </div>
-        <div style="margin: 5vh 10% 3vh 10%; height: 10vh; weight: 80%;">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" class="search" style="height: 100%;"></textarea>
-        </div>
-        <input type="submit" value="Submit" class="About_Us_Btn" style="margin: 2vh 10% 2vh 10%;width:20%; height: 10%; border-radius: 1.5vh;">
+        <lable for="agree" style="margin: 6% 10% 0 10%;">
+            <input type="checkbox" name="agree" id ="agree" style="height: 40%; width: 8%;">
+            Я согласен на обработку персональных данных
+        </lable>
+        <input type="submit" value="Отправить" class="Form_Btn" style="margin: 3% 10% 0 10%;width: 35%; height: 10%; border-radius: 1.5vh; font-size: 100%;">
       </form>
   </div>
 
-  <script src="script.js"></script>
+  <div id="copyNot" class="copyNot" style="z-index: 10;">Текст скопирован!</div>
+  <div id="sendNot" class="copyNot" style="z-index: 10;">Форма успешно отправлена!</div>
+  <div id="notSendNot" class="copyNot" style="z-index: 10;">Вы не подтвердили согласие!</div>
+
+  <script src="script.js?ver=1.0.3"></script>
 
 </body>
 </html>

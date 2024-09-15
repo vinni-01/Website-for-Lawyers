@@ -2,11 +2,38 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
+  height: 1000px;
   box-sizing: border-box;
+  overflow: auto;
 }
 
 /* Navigation */
+
+.copyNot{
+  visibility: hidden;
+  min-width: 200px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  font-size: 17px;
+}
+
+.copyNot.show {
+  visibility: visible;
+  animation: fadeInOut 2s;
+}
+
+@keyframes fadeInOut{
+  0%, 100%{ opacity: 0; }
+  50% { opacity: 1; }
+}
 
 .About_Us_Btn{
     border:none;
@@ -16,7 +43,7 @@ body {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    font-size: 2.3vh;
+    font-size: 300%;
     display: inline-block;
     height: 100%;
     width: 100%;
@@ -24,28 +51,109 @@ body {
     transition: background-color 0.3s;
 }
 
-.About_Us_Btn:hover {
-    background-color: #000000;
-    color: white;
+
+
+.About_Us {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 75vw; 
+    margin: 12vw 0 0 0;
 }
 
-.About_Us_Txt {
-    display: inline-block;
+.About_Us_Img {
+    padding: 0 0 2vw 0;
+    width: auto;
+    height: 7.5vw;
+}
+
+.nav {
+  height: 60%;
+  width: 15%;
+  color: #FFF;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 0.35vw;
+  letter-spacing: 3%;
+  align-items: center;
+  justify-content: center;
+  padding: 1% 2% 1% 2%;
+  text-transform: uppercase;
+}
+
+.Nav_Div {
+    position: fixed;
+    height: 5.5vw;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation {
+    width: 100%; /* Adjust width as needed */
+    height: 100%;
+    background-color: #FFF; /* Light grey background, change as you like */
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button */
+    border: 0px solid #cccccc; /* Adds a border around the box */
+    margin: 0; /* Spacing around the box */
+    padding: 0;
+    flex-direction: row;
+}
+
+.nav_img {
+    padding:0vh 0 0 2vw; 
+    height: 60%; 
+    width: 25%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.nav_txt {
+    margin:0; 
+    padding: 0 0 0 80vw; 
+    color: red; 
+    font-size: 1.3vw;
+}
+
+.nav_space {
+    height: 100%;
+    width: 50%;
 }
 
 .services {
+    display: flex;
+    margin: 0 0 0 0;
     width: 100%;
-    height: 100vh;
+    height: 80vw;
 }
 
 .services_body {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service_txt {
+    font-family: system-ui;
+    font-size: 2vw;
+    width:100%;
+}
+
+.service_img {
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add a subtle shadow */
 }
 
 .contacts{
     width: 100%;
-    height: 100vh;
+    height: 70vw;
     display: flex;
+    font-size: 1.3vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -60,22 +168,59 @@ body {
     text-align: center;
 }
 
+.contact_img {
+    height: 70%; 
+    width:50%; 
+    margin: 5% 10% 5% 5%;
+}
+
 .footer {
+    font-size: 1.3vw;
+    display: flex;
     width: 100%;
-    height: 10vh;
+    height: 8vw;
 }
 
 .form {
     position: fixed;
-    width: 300px;
-    padding: 20px;
+    font-size: 1.5vw;
+    padding: 2vw;
     background: #fff;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 5; 
+    display: none; 
+    width: 30vw; 
+    height: 45vw;
+}
+
+.form_box {
+
+    
+}
+
+.Form_Btn{
+    border:none;
+    background-color: #FFFFFF;
+    border: 0.3vh solid #000000;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 350%;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    top:0px;
+    transition: background-color 0.3s;
+}
+
+.Form_Btn:hover {
+    background-color: #000000;
+    color: white;
 }
 
 .overlay {
@@ -85,21 +230,11 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(0,0,0,0.7);
-    z-index: 1;
+    z-index: 4;
     display: none;
 }
 
-.navigation {
-    width: 100%; /* Adjust width as needed */
-    height: 6vw;
-    background-color: #FFFFFF; /* Light grey background, change as you like */
-    display: flex; /* Enables flexbox layout */
-    justify-content: center; /* Horizontally center the button */
-    align-items: center; /* Vertically center the button */
-    border: 0px solid #cccccc; /* Adds a border around the box */
-    margin: 0; /* Spacing around the box */
-    padding: 0;
-}
+
 
 ul {
   padding: 0;
@@ -107,44 +242,26 @@ ul {
   list-style: none;
 }
 
-.nav {
-  height: 60%;
-  width: 15%;
-  color: #FFF;
-  font-family: 'Oxygen', sans-serif;
-  font-size: 16px;
-  letter-spacing: 2px;
-  align-items: center;
-  justify-content: center;
-  padding: 1vh 2vw 1vh 2vw;
-  text-transform: uppercase;
-}
 
-.active {
-  color: red;
-}
-
-.active1 {
-    color: black;
-}
 
 /* Table */
 
 table {
-  height: 40%;
+  font-size: 1.5vw;
+  height: 30vw;
   left: 10%;
-  margin: 20px auto;
+  margin: 0 auto;
   overflow-y: scroll;
   position: static;
   width: 80%;
 }
 
 thead th {
-  background: #88CCF1;
+  background: #555;
   color: #FFF;
   font-family: 'Lato', sans-serif;
   font-weight: 100;
-  letter-spacing: 2px;
+  letter-spacing: 0.2vw;
   text-transform: uppercase;
 }
 
@@ -157,7 +274,7 @@ tr {
 th, td {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  padding: 20px;
+  padding: 1.5vw;
   text-align: left;
   width: 33.3333%;
 }
@@ -169,5 +286,382 @@ th, td {
   color: #000;
   padding: 0;
   width: 100%;
-  height: 100%;
+  height: 60%;
+}
+
+
+
+@media (max-width: 900px) {
+    .About_Us_Btn{
+    border:none;
+    background-color: #FFFFFF;
+    border: 0.3vw solid #000000;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.7vw;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    top:0px;
+    transition: background-color 0.3s;
+  }
+  .nav_img{
+    padding:0vh 0 0 10%; 
+    height: 60%; 
+    width: 25%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+  .Nav_Div {
+    position: fixed;
+    width: 100%;
+    height: 10vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navigation {
+    width: 100%;
+    background-color: #FFF; /* Light grey background, change as you like */
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button */
+    border: 0px solid #cccccc; /* Adds a border around the box */
+    margin: 0; /* Spacing around the box */
+    padding: 0;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .nav_space {
+    height: 100%;
+    width: 20%;
+  }
+
+
+  .nav_txt {
+    margin:0; 
+    padding: 0 0 0 75vw; 
+    color: red; 
+    font-size: 1.5vw;
+  }
+
+  table {
+    font-size: 1.5vw;
+    height: 40%;
+    left: 10%;
+    margin: 0 auto;
+    overflow-y: scroll;
+    position: static;
+    width: 80%;
+  }
+
+  thead th {
+    background: #555;
+    color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.2vw;
+    text-transform: uppercase;
+  }
+
+  tr {
+    background: #f4f7f8;
+    border-bottom: 1px solid #FFF;
+    margin-bottom: 5px;
+  }
+
+  th, td {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    padding: 2vw;
+    text-align: left;
+    width: 33.3333%;
+  }
+
+  .service_txt {
+    font-family: system-ui;
+    font-size: 2.3vw;
+    width:100%;
+  }
+
+  .services {
+    margin: 0 0 0 0;
+    height: 60vw;
+    width: 100%;
+
+  }
+
+  .service_img {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add a subtle shadow */
+  }
+
+  .About_Us {
+    height: 70vw; 
+    margin: 14vw 0 0 0;
+  }
+
+  .About_Us_Img {
+    padding: 0 0 3vw 0;
+    width: 15%;
+    height: 10%;
+}
+
+  .contacts {
+    width: 100%;
+    height: 100vw;
+    display: flex;
+    font-size: 1.5vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact_img {
+    height: 60%; 
+    width: 55%; 
+    margin: 5% 10% 5% 5%;
+  }
+
+  .footer {
+    display: flex;
+    width: 100%;
+    height: 10vw;
+    font-size: 1.5vw;
+  }
+
+  .form {
+    position: fixed;
+    font-size: 2vw;
+    padding: 2vw;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5; 
+    display: none; 
+    width: 40vw; 
+    height: 60vw;
+  }
+
+  .form_box {
+
+        
+  }
+
+  .Form_Btn{
+    border:none;
+    background-color: #FFFFFF;
+    border: 0.3vh solid #000000;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 350%;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    top:0px;
+    transition: background-color 0.3s;
+  }
+
+  .Form_Btn:hover {
+    background-color: #000000;
+    color: white;
+  }
+}
+
+@media (max-width: 480px) {
+  .About_Us_Btn{
+    border:none;
+    background-color: #FFFFFF;
+    border: 0.15vw solid #000000;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.7vw;
+    display: inline-block;
+    height: 75%;
+    width: 100%;
+    top:0px;
+    transition: background-color 0.3s;
+  }
+  .nav_img{
+    padding:0vh 0 0 5%; 
+    height: 60%; 
+    width: 30%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+  .Nav_Div {
+    position: fixed;
+    width: 100%;
+    height: 12vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .navigation {
+    width: 100%;
+    background-color: #FFF; /* Light grey background, change as you like */
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button */
+    border: 0px solid #cccccc; /* Adds a border around the box */
+    margin: 0; /* Spacing around the box */
+    padding: 0;
+    height: 100%;
+    flex-direction: row;
+  }
+
+  .nav_space {
+    height: 100%;
+    width: 20%;
+  }
+
+
+  .nav_txt {
+    margin:0; 
+    padding: 0 0 0 75vw; 
+    color: red; 
+    font-size: 1.7vw;
+  }
+
+  table {
+    font-size: 1.8vw;
+    height: 40%;
+    left: 10%;
+    margin: 0 auto;
+    overflow-y: scroll;
+    position: static;
+    width: 80%;
+  }
+
+  thead th {
+    background: #555;
+    color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.2vw;
+    text-transform: uppercase;
+  }
+
+  tr {
+    background: #f4f7f8;
+    border-bottom: 1px solid #FFF;
+    margin-bottom: 5px;
+  }
+
+  th, td {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    padding: 2vw;
+    text-align: left;
+    width: 33.3333%;
+  }
+
+  .service_txt {
+    font-family: system-ui;
+    font-size: 2vw;
+    width:100%;
+  }
+
+  .services {
+    height: 60vw;
+    width: 100%;
+
+  }
+
+  .service_img {
+    width: 70%;
+    max-width: 600px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add a subtle shadow */
+  }
+
+  .About_Us {
+    height: 90vw; 
+    margin: 15vw 0 0 0;
+  }
+
+  .About_Us_Img {
+    padding: 0 0 3vh 0;
+    width: 15%;
+    height: 10%;
+}
+
+  .contacts {
+    width: 100%;
+    height: 100vw;
+    display: flex;
+    font-size: 2vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact_img {
+    height: 60%; 
+    width: 55%; 
+    margin: 5% 10% 5% 5%;
+  }
+
+
+  .footer {
+    display: flex;
+    width: 100%;
+    height: 15vw;
+    font-size: 2vw;
+  }
+
+  .form {
+    font-size: 10px;
+    position: fixed;
+    padding: 2vw;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5; 
+    display: none; 
+    width: 200px; 
+    height: 450px;
+  }
+
+  .form_box {
+
+        
+  }
+
+  .Form_Btn{
+    border:none;
+    background-color: #FFFFFF;
+    border: 0.3vh solid #000000;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 200%;
+    display: inline-block;
+    height: 100%;
+    width: 120%;
+    top:0px;
+    transition: background-color 0.3s;
+  }
+
+  .Form_Btn:hover {
+    background-color: #000000;
+    color: white;
+  }
 }
